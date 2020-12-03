@@ -1,0 +1,17 @@
+<p-dialog [(visible)]="isShown" [style]="styleValues">
+    <p-header>
+        {{ inputBuilderDefinition?.title }}
+    </p-header>
+    <div class="ui-fluid" #popupContainer [style.width.px]="setWidth">
+        <ngs-input-builder
+            *ngIf="isShown"
+            (modelUpdated)="notifyChanged($event)"
+            (okClicked)="onOkClicked($event)"
+            (cancelClicked)="onCancelClicked()"
+            (modelUpdated)="onModelUpdated($event)"
+            (valueUpdated)="onValueUpdated()"
+            [inputBuilderDefinition]="inputBuilderDefinition"
+            [inputModel]="inputModel"
+        ></ngs-input-builder>
+    </div>
+</p-dialog>

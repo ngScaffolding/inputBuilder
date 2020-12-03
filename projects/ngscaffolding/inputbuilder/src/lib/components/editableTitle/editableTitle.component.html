@@ -1,0 +1,5 @@
+<span *ngIf="!isEditing" class="title-display" (click)="mouseClicked()" (mouseleave)="mouseLeave()" (mouseenter)="mouseOver()">{{title}}</span>
+
+<button *ngIf="displayIcon" pButton class="p-button-rounded p-button-info p-button-text p-mr-2 p-mb-2" type="button" icon="pi pi-pencil"></button>
+
+<input #inputTitle class="large-edit" *ngIf="isEditing" type="text" (blur)="isEditing=false" [(ngModel)]="editTitle" (change)="textChanged()" pInputText>
