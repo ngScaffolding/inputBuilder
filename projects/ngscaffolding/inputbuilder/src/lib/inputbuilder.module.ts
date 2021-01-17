@@ -40,6 +40,8 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from 'primeng/api';
 
+export const translateModule = TranslateModule.forChild();
+
 @NgModule({
     declarations: [EditableTitleComponent, InputBuilderComponent, InputBuilderPopupComponent],
     imports: [
@@ -75,7 +77,7 @@ import { SharedModule } from 'primeng/api';
         TooltipModule,
         NgJsonEditorModule,
         FileUploadModule,
-        TranslateModule.forChild(),
+        translateModule
     ],
     exports: [EditableTitleComponent, InputBuilderComponent, InputBuilderPopupComponent],
 })
