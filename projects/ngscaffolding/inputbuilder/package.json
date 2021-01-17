@@ -1,6 +1,6 @@
 {
   "name": "@ngscaffolding/inputbuilder",
-  "version": "0.0.1",
+  "version": "2.0.1",
   "peerDependencies": {
     "@angular/animations": "~11.0.1",
     "@angular/cdk": "^11.0.1",
